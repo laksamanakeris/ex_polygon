@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v1/open-close/AAPL/2020-06-03?apiKey=***"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"status\":\"OK\",\"from\":\"2020-06-03\",\"symbol\":\"AAPL\",\"open\":324.66,\"high\":326.2,\"low\":322.3,\"close\":325.12,\"volume\":26122646,\"afterHours\":322.1,\"preMarket\":324.5}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Wed, 02 Sep 2020 17:46:21 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "160",
+        "Connection": "keep-alive",
+        "X-Request-Id": "ff75c6da7052f856d46f198d9a616ce5",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

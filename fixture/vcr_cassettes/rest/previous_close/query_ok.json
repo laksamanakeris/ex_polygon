@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v2/aggs/ticker/AAPL/prev?apiKey=***&unadjusted=false"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"ticker\":\"AAPL\",\"status\":\"OK\",\"queryCount\":1,\"resultsCount\":1,\"adjusted\":true,\"results\":[{\"T\":\"AAPL\",\"v\":1.54888294e+08,\"vw\":132.8502,\"o\":132.76,\"c\":134.18,\"h\":134.8,\"l\":130.53,\"t\":1598990400000}]}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Wed, 02 Sep 2020 15:54:11 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "198",
+        "Connection": "keep-alive",
+        "X-Request-Id": "56b4b1ceb8879fe804e7d0a685254c94",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -16,7 +16,7 @@ defmodule ExPolygon.Rest.DailyOpenClose do
     end
   end
 
-  defp parse_response(data) do
+  defp parse_response(%{"status" => "OK"} = data) do
     {:ok, open_close} =
       Mapail.map_to_struct(data, ExPolygon.DayOpenClose, transformations: [:snake_case])
 

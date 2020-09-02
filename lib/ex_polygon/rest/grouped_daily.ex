@@ -5,15 +5,15 @@ defmodule ExPolygon.Rest.GroupedDaily do
 
   @path "/v2/aggs/grouped/locale/:locale/market/:market/:date"
 
-  @spec query(String.t(), String.t(), String.t(), api_key) ::
+  @spec query(String.t(), String.t(), String.t(), map, api_key) ::
           {:ok, aggregate} | {:error, shared_error_reasons}
-  def query(symbol, market, date, api_key) do
+  def query(symbol, market, date, map \\ %{}, api_key) do
     with {:ok, data} <-
            @path
            |> String.replace(":locale", symbol)
            |> String.replace(":market", market)
            |> String.replace(":date", date)
-           |> ExPolygon.Rest.HTTPClient.get(%{}, api_key) do
+           |> ExPolygon.Rest.HTTPClient.get(map, api_key) do
       parse_response(data)
     end
   end
@@ -21,9 +21,7 @@ defmodule ExPolygon.Rest.GroupedDaily do
   defp parse_response(%{"results" => results} = data) do
     results =
       results
-      |> Enum.map(
-        &Mapail.map_to_struct(&1, ExPolygon.AggregateResult, transformations: [:snake_case])
-      )
+      |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.DayClose, transformations: [:snake_case]))
       |> Enum.map(fn {:ok, result} -> result end)
 
     {:ok, aggregate} =

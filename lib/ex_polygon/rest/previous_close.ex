@@ -5,12 +5,13 @@ defmodule ExPolygon.Rest.PreviousClose do
 
   @path "/v2/aggs/ticker/:symbol/prev"
 
-  @spec query(String.t(), api_key) :: {:ok, aggregate} | {:error, shared_error_reasons}
-  def query(symbol, api_key) do
+  @spec query(String.t(), map, api_key) ::
+          {:ok, aggregate} | {:error, shared_error_reasons}
+  def query(symbol, map \\ %{}, api_key) do
     with {:ok, data} <-
            @path
            |> String.replace(":symbol", symbol)
-           |> ExPolygon.Rest.HTTPClient.get(%{}, api_key) do
+           |> ExPolygon.Rest.HTTPClient.get(map, api_key) do
       parse_response(data)
     end
   end
@@ -18,9 +19,7 @@ defmodule ExPolygon.Rest.PreviousClose do
   defp parse_response(%{"results" => results} = data) do
     results =
       results
-      |> Enum.map(
-        &Mapail.map_to_struct(&1, ExPolygon.AggregateResult, transformations: [:snake_case])
-      )
+      |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.DayClose, transformations: [:snake_case]))
       |> Enum.map(fn {:ok, result} -> result end)
 
     {:ok, aggregate} =

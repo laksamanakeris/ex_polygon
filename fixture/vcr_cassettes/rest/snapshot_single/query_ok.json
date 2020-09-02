@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/AAPL?apiKey=***"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"status\":\"OK\",\"ticker\":{\"day\":{\"c\":131.035,\"h\":137.98,\"l\":127,\"o\":137.59,\"v\":179767034,\"vw\":131.6358},\"lastQuote\":{\"P\":131.05,\"S\":26,\"p\":131.04,\"s\":56,\"t\":1599075688006261008},\"lastTrade\":{\"c\":null,\"i\":\"20539\",\"p\":131.045,\"s\":100,\"t\":1599075688531623868,\"x\":15},\"min\":{\"av\":179757471,\"c\":131.0297,\"h\":131.09,\"l\":130.88,\"o\":130.89,\"v\":361514,\"vw\":131.01},\"prevDay\":{\"c\":134.18,\"h\":134.8,\"l\":130.53,\"o\":132.76,\"v\":154888294,\"vw\":132.8502},\"ticker\":\"AAPL\",\"todaysChange\":-3.135,\"todaysChangePerc\":-2.336,\"updated\":1599075688531623868}}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Wed, 02 Sep 2020 19:41:28 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "533",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "X-Request-Id": "c647d7b5d49a634a5fd8824cf4f1e6f5",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
