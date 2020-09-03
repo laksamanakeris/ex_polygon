@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v1/conversion/AUD/USD?apiKey=***&amount=100"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"status\":\"success\",\"last\":{\"bid\":1.373834,\"ask\":1.3738717,\"exchange\":48,\"timestamp\":1599150641000},\"from\":\"AUD\",\"to\":\"USD\",\"initialAmount\":100,\"converted\":72.79}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Thu, 03 Sep 2020 16:30:42 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "162",
+        "Connection": "keep-alive",
+        "X-Request-Id": "3b6550b7c9e14d71a2a746a5a890c78d",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
