@@ -17,7 +17,7 @@ defmodule ExPolygon.Rest.LastQuoteCurrency do
     end
   end
 
-  defp parse_response(%{"status" => "success", "last" => last} = data) do
+  defp parse_response(%{"status" => "success", "last" => last}) do
     {:ok, last} = Mapail.map_to_struct(last, ExPolygon.Last, transformations: [:snake_case])
 
     {:ok, last}
