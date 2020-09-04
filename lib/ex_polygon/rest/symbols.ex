@@ -22,6 +22,8 @@ defmodule ExPolygon.Rest.Symbols do
     |> parse_response(ExPolygon.CompanyDetail)
   end
 
+  # TODO - remove unsupported calls
+  # TODO
   @spec ratings(symbol, api_key) :: {:ok, company_ratings}
   def ratings(symbol, api_key) do
     [@path, symbol, @ratings]
