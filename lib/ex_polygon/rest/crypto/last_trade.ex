@@ -1,4 +1,4 @@
-defmodule ExPolygon.Rest.Crypto.LastQuote do
+defmodule ExPolygon.Rest.Crypto.LastTrade do
   @type last_crypto :: ExPolygon.LastCryptoConversion.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

@@ -10,14 +10,14 @@
     },
     "response": {
       "binary": false,
-      "body": "{\"ticker\":\"AAPL\",\"status\":\"OK\",\"queryCount\":1,\"resultsCount\":1,\"adjusted\":true,\"results\":[{\"T\":\"AAPL\",\"v\":1.54888294e+08,\"vw\":132.8502,\"o\":132.76,\"c\":134.18,\"h\":134.8,\"l\":130.53,\"t\":1598990400000}]}",
+      "body": "{\"ticker\":\"AAPL\",\"status\":\"OK\",\"queryCount\":1,\"resultsCount\":1,\"adjusted\":true,\"results\":[{\"T\":\"AAPL\",\"v\":3.36546289e+08,\"vw\":117.9427,\"o\":120.07,\"c\":120.96,\"h\":123.7,\"l\":110.89,\"t\":1599249600000}]}",
       "headers": {
         "Server": "nginx/1.17.8",
-        "Date": "Wed, 02 Sep 2020 15:54:11 GMT",
+        "Date": "Sat, 05 Sep 2020 19:28:33 GMT",
         "Content-Type": "application/json",
         "Content-Length": "198",
         "Connection": "keep-alive",
-        "X-Request-Id": "56b4b1ceb8879fe804e7d0a685254c94",
+        "X-Request-Id": "e7d2ba659acf6b296b8dc87100214f21",
         "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
       },
       "status_code": 200,

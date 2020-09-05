@@ -24,6 +24,13 @@ defmodule ExPolygon.Rest.Crypto.HistoricTicks do
     end
   end
 
+  def parse_response(%{"ticks" => nil, "status" => "success"} = data) do
+    {:ok, h_crypto} =
+      Mapail.map_to_struct(data, ExPolygon.HistoricCrypto, transformations: [:snake_case])
+
+    {:ok, h_crypto}
+  end
+
   def parse_response(%{"ticks" => ticks, "status" => "success"} = data) do
     ticks =
       ticks

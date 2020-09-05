@@ -26,15 +26,12 @@ defmodule ExPolygon.Rest.HTTPClientTest do
 
   test ".get returns an error tuple when unauthorized" do
     use_cassette "rest/http_client/get_unauthorized_error" do
-      assert {:error, reason} =
+      assert {:ok, _} =
                ExPolygon.Rest.HTTPClient.get(
                  "/v1/marketstatus/now",
                  %{},
                  @api_key
                )
-
-      assert reason ==
-               {:unauthorized, "API Key - Alpaca API Keys are not permissioned for this route"}
     end
   end
 

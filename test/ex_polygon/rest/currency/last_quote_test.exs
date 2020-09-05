@@ -11,7 +11,7 @@ defmodule ExPolygon.Rest.Currency.LastQuoteTest do
   @api_key System.get_env("POLYGON_API_KEY")
 
   test ".query returns an ok tuple with a last quote for currency" do
-    use_cassette "rest/last_quote_currency/query_ok" do
+    use_cassette "rest/currency/last_quote/query_ok" do
       assert {:ok, quot} = ExPolygon.Rest.Currency.LastQuote.query("AUD", "USD", @api_key)
 
       assert %ExPolygon.CurrencyQuote{} = quot

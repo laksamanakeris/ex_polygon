@@ -11,7 +11,7 @@ defmodule ExPolygon.Rest.Forex.HistoricTicksTest do
   @api_key System.get_env("POLYGON_API_KEY")
 
   test ".query returns an ok tuple with a historic forex" do
-    use_cassette "rest/historic_forex/query_ok" do
+    use_cassette "rest/forex/historic_forex/query_ok" do
       assert {:ok, historic} =
                ExPolygon.Rest.Forex.HistoricTicks.query(
                  "AUD",

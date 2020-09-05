@@ -11,7 +11,7 @@ defmodule ExPolygon.Rest.Stocks.HistoricTradesTest do
   @api_key System.get_env("POLYGON_API_KEY")
 
   test ".query returns an ok tuple and trade history" do
-    use_cassette "rest/historic_trade/query_ok" do
+    use_cassette "rest/stocks/historic_trade/query_ok" do
       limit = 10
 
       assert {:ok, history} =

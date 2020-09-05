@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v1/historic/crypto/BTC/USD/2018-02-02}?apiKey=***&limit=10"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"day\":\"2018-02-02}\",\"map\":{\"c\":\"conditions\",\"p\":\"price\",\"s\":\"size\",\"t\":\"timestamp\",\"x\":\"exchange\"},\"msLatency\":2,\"status\":\"success\",\"symbol\":\"BTC-USD\",\"ticks\":null,\"type\":\"crypto\"}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:47 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "181",
+        "Connection": "keep-alive",
+        "X-Request-Id": "1b2bc0c8d30f4d5206d2407acb4ff1be",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

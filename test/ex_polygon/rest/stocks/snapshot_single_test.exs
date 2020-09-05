@@ -10,8 +10,8 @@ defmodule ExPolygon.Rest.Stocks.SnapshotSingleTest do
 
   @api_key System.get_env("POLYGON_API_KEY")
 
-  test ".query returns an ok tuple and a snapshot of choise" do
-    use_cassette "rest/snapshot_single/query_ok" do
+  test ".query returns an ok tuple and a snapshot of choice" do
+    use_cassette "rest/stocks/snapshot_single/query_ok" do
       assert {:ok, snap} = ExPolygon.Rest.Stocks.SnapshotSingle.query("AAPL", @api_key)
 
       assert %ExPolygon.Snapshot{} = snap

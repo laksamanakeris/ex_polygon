@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v1/last/crypto/BTC/USD?apiKey=***"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"last\":{\"conditions\":[1],\"exchange\":17,\"price\":9919,\"size\":0.01,\"timestamp\":1599334129061},\"status\":\"success\",\"symbol\":\"BTC-USD\"}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:49 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "130",
+        "Connection": "keep-alive",
+        "X-Request-Id": "0a1990edaae2e1d12fe6e19ed2afccdc",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

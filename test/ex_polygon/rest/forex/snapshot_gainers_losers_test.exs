@@ -1,0 +1,31 @@
+defmodule ExPolygon.Rest.Forex.SnapshotGainersLosersTest do
+  use ExUnit.Case, async: false
+  use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
+  doctest ExPolygon.Rest.HTTPClient
+
+  setup_all do
+    HTTPoison.start()
+    :ok
+  end
+
+  @api_key System.get_env("POLYGON_API_KEY")
+
+  # TODO redo the cassettes ones the marker is on
+
+  test ".query returns an ok tuple and a list top/bottom 20 tickers" do
+    use_cassette "rest/forex/snapshot_gainers_losers/query_ok" do
+      assert {:ok, snaps} = ExPolygon.Rest.Forex.SnapshotGainersLosers.query("gainers", @api_key)
+
+      assert [%ExPolygon.Snapshot{} = snap | _] = snaps
+      assert is_bitstring(snap.ticker)
+      assert is_map(snap.day)
+      # assert is_map(snap.last_trade)
+      assert is_map(snap.last_quote)
+      assert is_map(snap.min)
+      assert is_map(snap.prev_day)
+      assert is_number(snap.todays_change)
+      assert is_number(snap.todays_change_perc)
+      assert is_integer(snap.updated)
+    end
+  end
+end

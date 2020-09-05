@@ -25,14 +25,15 @@ defmodule ExPolygon.Rest.GroupedDailyTest do
       assert grouped_daily.adjusted == true
       assert [%ExPolygon.DayClose{} = day_close | _] = grouped_daily.results
       assert length(grouped_daily.results) == grouped_daily.results_count
-      assert Map.fetch(day_close, :T) == {:ok, "SPYV"}
+      assert {:ok, ticker} = Map.fetch(day_close, :T)
+      assert is_bitstring(ticker)
       assert is_float(day_close.c)
       assert is_float(day_close.h)
       assert is_float(day_close.l)
       assert is_integer(day_close.n)
       assert is_float(day_close.o)
       assert is_integer(day_close.t)
-      assert is_float(day_close.v)
+      assert is_number(day_close.v)
     end
   end
 end

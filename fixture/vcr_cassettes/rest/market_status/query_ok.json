@@ -10,16 +10,16 @@
     },
     "response": {
       "binary": false,
-      "body": "{\"market\":\"open\",\"serverTime\":\"2020-08-28T13:58:35-04:00\",\"exchanges\":{\"nyse\":\"open\",\"nasdaq\":\"open\",\"otc\":\"open\"},\"currencies\":{\"fx\":\"open\",\"crypto\":\"open\"}}",
+      "body": "{\"market\":\"closed\",\"serverTime\":\"2020-09-05T15:28:35-04:00\",\"exchanges\":{\"nyse\":\"closed\",\"nasdaq\":\"closed\",\"otc\":\"closed\"},\"currencies\":{\"fx\":\"closed\",\"crypto\":\"open\"}}",
       "headers": {
         "Server": "nginx/1.17.8",
-        "Date": "Fri, 28 Aug 2020 17:58:35 GMT",
+        "Date": "Sat, 05 Sep 2020 19:28:35 GMT",
         "Content-Type": "application/json",
-        "Content-Length": "158",
+        "Content-Length": "168",
         "Connection": "keep-alive",
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Origin": "*",
-        "X-Request-Id": "caebfadfcd8a5db7d33b51395feab731",
+        "X-Request-Id": "e68fea99afb0ada04090920b08e2c589",
         "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
       },
       "status_code": 200,

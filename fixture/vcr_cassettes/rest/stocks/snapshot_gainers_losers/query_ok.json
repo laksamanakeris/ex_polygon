@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/gainers?apiKey=***"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"status\":\"OK\",\"tickers\":[]}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:27 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "28",
+        "Connection": "keep-alive",
+        "X-Request-Id": "749e46ee6a72b651e7188587c425024e",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

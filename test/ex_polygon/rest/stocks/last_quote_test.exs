@@ -11,7 +11,7 @@ defmodule ExPolygon.Rest.Stocks.LastQuoteTest do
   @api_key System.get_env("POLYGON_API_KEY")
 
   test ".query returns an ok tuple and last quote" do
-    use_cassette "rest/last_quote/query_ok" do
+    use_cassette "rest/stocks/last_quote/query_ok" do
       assert {:ok, last_quote} =
                ExPolygon.Rest.Stocks.LastQuoteOfTicker.query(
                  "AAPL",

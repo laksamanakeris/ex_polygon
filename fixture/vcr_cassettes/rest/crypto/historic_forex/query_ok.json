@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v1/historic/crypto/BTC/USD/2019-02-02}?apiKey=***&limit=10"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"day\":\"2019-02-02}\",\"map\":{\"c\":\"conditions\",\"p\":\"price\",\"s\":\"size\",\"t\":\"timestamp\",\"x\":\"exchange\"},\"msLatency\":2,\"status\":\"success\",\"symbol\":\"BTC-USD\",\"ticks\":[{\"s\":0.00593677,\"p\":3437.55,\"x\":1,\"t\":1548892800237,\"c\":[1]},{\"s\":0.013,\"p\":3529.7,\"x\":2,\"t\":1548892800670,\"c\":[1]},{\"s\":0.021914,\"p\":3457,\"x\":4,\"t\":1548892801713,\"c\":[3]},{\"s\":0.02922653,\"p\":3437.55,\"x\":1,\"t\":1548892801737,\"c\":[1]},{\"s\":0.045412,\"p\":3457.5,\"x\":4,\"t\":1548892801785,\"c\":[4]},{\"s\":0.045411,\"p\":3458.18,\"x\":4,\"t\":1548892801805,\"c\":[4]},{\"s\":0.003239,\"p\":3458.18,\"x\":4,\"t\":1548892802064,\"c\":[4]},{\"s\":0.0005,\"p\":3458.21,\"x\":11,\"t\":1548892802875,\"c\":[2]},{\"s\":0.00452,\"p\":3457.53,\"x\":10,\"t\":1548892803363,\"c\":[2]},{\"s\":0.0002881,\"p\":3436.61,\"x\":5,\"t\":1548892803526,\"c\":[1]}],\"type\":\"crypto\"}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:47 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "764",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "X-Request-Id": "5975069103812bd989b693c73a6f99ab",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

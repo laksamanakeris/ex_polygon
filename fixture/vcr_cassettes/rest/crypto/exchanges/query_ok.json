@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v1/meta/crypto-exchanges?apiKey=***"
+    },
+    "response": {
+      "binary": false,
+      "body": "[{\"id\":1,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"GDAX\",\"url\":\"https://www.gdax.com/\"},{\"id\":2,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"BITFINEX\",\"url\":\"https://www.bitfinex.com/\"},{\"id\":3,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"BitMEX\",\"url\":\"https://www.bitmex.com/\"},{\"id\":4,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"Binance\",\"url\":\"https://www.binance.com/\"},{\"id\":5,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"Binance\",\"url\":\"https://gemini.com/\"},{\"id\":6,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"Bitstamp\",\"url\":\"https://www.bitstamp.net/\"},{\"id\":7,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"POLONIEX\",\"url\":\"https://poloniex.com/\"},{\"id\":8,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"CEXIO\",\"url\":\"https://cex.io/\"},{\"id\":9,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"BitBay\",\"url\":\"https://bitbay.net/en\"},{\"id\":10,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"HitBTC\",\"url\":\"https://hitbtc.com/\"},{\"id\":11,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"Huobi\",\"url\":\"https://www.huobi.pro/\"},{\"id\":12,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"bitFlyer\",\"url\":\"https://bitflyer.com/en-us/\"},{\"id\":13,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"Luno\",\"url\":\"https://www.luno.com/en/\"},{\"id\":14,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"Coin Mate\",\"url\":\"https://coinmate.io/\"},{\"id\":15,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"OKCoin\",\"url\":\"https://www.okcoin.com/lang/en-US/\"},{\"id\":16,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"WEX\",\"url\":\"https://wex.nz/\"},{\"id\":17,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"OKEx\",\"url\":\"https://www.okex.com/\"},{\"id\":18,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"BL3P\",\"url\":\"https://bl3p.eu/\"},{\"id\":19,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"BTCMarkets\",\"url\":\"https://www.btcmarkets.net/\"},{\"id\":20,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"CCEX\",\"url\":\"https://c-cex.com/\"},{\"id\":21,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"Coincheck\",\"url\":\"https://coincheck.com/\"},{\"id\":22,\"type\":\"exchange\",\"market\":\"crypto\",\"name\":\"coinfloor\",\"url\":\"https://www.coinfloor.co.uk/\"}]",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:50 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "X-Request-Id": "7cb1aab61df9e0024341a80d5a533dbe",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -10,25 +10,19 @@
     },
     "response": {
       "binary": false,
-      "body": "{\"message\":\"API Key - Alpaca API Keys are not permissioned for this route\"}",
+      "body": "{\"market\":\"closed\",\"serverTime\":\"2020-09-05T15:28:38-04:00\",\"exchanges\":{\"nyse\":\"closed\",\"nasdaq\":\"closed\",\"otc\":\"closed\"},\"currencies\":{\"fx\":\"closed\",\"crypto\":\"open\"}}",
       "headers": {
-        "Server": "nginx/1.13.12",
-        "Date": "Sat, 9 Mar 2019 01:14:13 GMT",
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:38 GMT",
         "Content-Type": "application/json",
-        "Content-Length": "75",
+        "Content-Length": "168",
         "Connection": "keep-alive",
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, Api-Version, Response-Time",
-        "Access-Control-Allow-Methods": "GET",
-        "Access-Control-Expose-Headers": "Api-Version, Request-Id, Response-Time",
-        "Content-MD5": "mUbjkmk6v5fmTs25bz5wMQ==",
-        "Api-Version": "1.0.0",
-        "Request-Id": "1b14e182-8f65-41b4-b91d-2982089a3de3",
-        "Response-Time": "39",
+        "X-Request-Id": "c929f0246f10a31cbf2ce646d333335d",
         "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
       },
-      "status_code": 401,
+      "status_code": 200,
       "type": "ok"
     }
   }

@@ -10,9 +10,11 @@ defmodule ExPolygon.Rest.Stocks.SnapshotGainersLosersTest do
 
   @api_key System.get_env("POLYGON_API_KEY")
 
+  # TODO redo the cassettes ones the marker is on
+
   test ".query returns an ok tuple and a list top/bottom 20 tickers" do
-    use_cassette "rest/snapshot_gainers_losers/query_ok" do
-      assert {:ok, snaps} = ExPolygon.Rest.Stocks.SnapshotAll.query(@api_key)
+    use_cassette "rest/stocks/snapshot_gainers_losers/query_ok" do
+      assert {:ok, snaps} = ExPolygon.Rest.Stocks.SnapshotGainersLosers.query("gainers", @api_key)
 
       assert [%ExPolygon.Snapshot{} = snap | _] = snaps
       assert is_bitstring(snap.ticker)

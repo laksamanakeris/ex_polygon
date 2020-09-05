@@ -11,7 +11,7 @@ defmodule ExPolygon.Rest.Currency.ConversionTest do
   @api_key System.get_env("POLYGON_API_KEY")
 
   test ".query returns an ok tuple with a conversion of currencies" do
-    use_cassette "rest/currency_conversion/query_ok" do
+    use_cassette "rest/currency/conversion/query_ok" do
       assert {:ok, conversion} =
                ExPolygon.Rest.Currency.Conversion.query(
                  "AUD",

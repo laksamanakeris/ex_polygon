@@ -14,9 +14,7 @@ defmodule ExPolygon.Rest.Forex.SnapshotAll do
     end
   end
 
-  defp parse_response(%{"status" => "OK", "tickers" => results} = data) do
-    IO.inspect(data)
-
+  defp parse_response(%{"status" => "OK", "tickers" => results}) do
     snapshots =
       results
       |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.Snapshot, transformations: [:snake_case]))

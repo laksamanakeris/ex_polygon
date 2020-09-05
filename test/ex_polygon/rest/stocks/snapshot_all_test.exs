@@ -11,7 +11,7 @@ defmodule ExPolygon.Rest.Stocks.SnapshotAllTest do
   @api_key System.get_env("POLYGON_API_KEY")
 
   test ".query returns an ok tuple and a list of snapshots" do
-    use_cassette "rest/snapshot_all/query_ok" do
+    use_cassette "rest/stocks/snapshot_all/query_ok" do
       assert {:ok, snaps} = ExPolygon.Rest.Stocks.SnapshotAll.query(@api_key)
 
       assert [%ExPolygon.Snapshot{} = snap | _] = snaps

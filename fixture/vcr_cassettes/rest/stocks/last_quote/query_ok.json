@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v1/last_quote/stocks/AAPL?apiKey=***"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"last\":{\"askexchange\":11,\"askprice\":120.1,\"asksize\":12,\"bidexchange\":11,\"bidprice\":120.01,\"bidsize\":1,\"timestamp\":1599263998142},\"status\":\"success\",\"symbol\":\"AAPL\"}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:31 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "165",
+        "Connection": "keep-alive",
+        "X-Request-Id": "8822c3da83a2a3c4fdda6cec6c0fabf1",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

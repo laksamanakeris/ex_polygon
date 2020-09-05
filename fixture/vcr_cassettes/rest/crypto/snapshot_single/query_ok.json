@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.polygon.io/v2/snapshot/locale/global/markets/crypto/tickers/X:BTCUSD?apiKey=***"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"request_id\":\"9fec93382f06546b53af9ef2f301609a\",\"status\":\"OK\",\"ticker\":{\"day\":{\"c\":9945.62,\"h\":10528.93899432,\"l\":9813,\"o\":10408.72,\"v\":180088.88557623,\"vw\":0},\"lastTrade\":{\"c\":[2],\"i\":\"406693116\",\"p\":9934.58,\"s\":0.003354,\"t\":1599334124539,\"x\":4},\"min\":{\"c\":9955.28,\"h\":10010,\"l\":9951.7,\"o\":9966.58,\"v\":277.00012819,\"vw\":0},\"prevDay\":{\"c\":10409.02,\"h\":10409.29,\"l\":10408.72,\"o\":10408.72,\"v\":0.515211,\"vw\":10409.223},\"ticker\":\"X:BTCUSD\",\"todaysChange\":-474.44,\"todaysChangePerc\":-4.55797,\"updated\":1599334080000}}",
+      "headers": {
+        "Server": "nginx/1.17.8",
+        "Date": "Sat, 05 Sep 2020 19:28:44 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "513",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "X-Request-Id": "9fec93382f06546b53af9ef2f301609a",
+        "Strict-Transport-Security": "max-age=15724800; includeSubDomains"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
