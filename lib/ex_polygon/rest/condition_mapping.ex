@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.ConditionMapping do
+  @moduledoc """
+  Returns a call to "Condition Mappings" Polygon.io
+  """
+
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()
 

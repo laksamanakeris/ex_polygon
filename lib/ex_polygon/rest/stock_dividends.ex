@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.StockDividends do
+  @moduledoc """
+  Returns a call to "Stock Dividends" Polygon.io
+  """
+
   @type dividend :: ExPolygon.Dividend.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

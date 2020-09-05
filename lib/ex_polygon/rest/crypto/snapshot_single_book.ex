@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Crypto.SnapshotSingleBook do
+  @moduledoc """
+  Returns a call to Crypto "Snapshot - Single Ticker Full Book" Polygon.io
+  """
+
   @type book :: ExPolygon.CryptoBook.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

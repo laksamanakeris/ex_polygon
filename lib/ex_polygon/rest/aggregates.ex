@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Aggregates do
+  @moduledoc """
+  Returns a call to "Aggregates ( Bars )" Polygon.io
+  """
+
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()
   @type aggregate :: ExPolygon.Aggregate.t()

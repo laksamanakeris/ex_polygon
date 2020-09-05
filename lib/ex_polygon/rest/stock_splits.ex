@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.StockSplits do
+  @moduledoc """
+  Returns a call to "Stock Splits" Polygon.io
+  """
+
   @type split :: ExPolygon.Split.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

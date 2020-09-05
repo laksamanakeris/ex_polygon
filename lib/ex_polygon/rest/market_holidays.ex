@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.MarketHolidays do
+  @moduledoc """
+  Returns a call to "Market Holidays" Polygon.io
+  """
+
   @type holiday :: ExPolygon.MarketHoliday.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.TickerNews do
+  @moduledoc """
+  Returns a call to "Ticker News" Polygon.io
+  """
+
   @type news :: ExPolygon.TickerNews.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

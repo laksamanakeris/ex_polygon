@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Locales do
+  @moduledoc """
+  Returns a call to "Locales" Polygon.io
+  """
+
   @type locale :: ExPolygon.Locale.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

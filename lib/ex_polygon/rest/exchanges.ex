@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Exchanges do
+  @moduledoc """
+  Returns a call to "Exchanges" Polygon.io
+  """
+
   @type exchange :: ExPolygon.Exchange.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

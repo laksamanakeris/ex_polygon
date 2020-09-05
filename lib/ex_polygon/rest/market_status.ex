@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.MarketStatus do
+  @moduledoc """
+  Returns a call to "Market Status" Polygon.io
+  """
+
   @type status :: ExPolygon.MarketStatus.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

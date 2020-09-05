@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Stocks.LastTradeOfTicker do
+  @moduledoc """
+  Returns a call to "Last Trade for a Symbol" Polygon.io
+  """
+
   @type last_trade :: ExPolygon.LastTrade.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Currency.Conversion do
+  @moduledoc """
+  Returns a call to "Real-time Currency Conversion" Polygon.io
+  """
+
   @type conversion :: ExPolygon.CurrencyConversion.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

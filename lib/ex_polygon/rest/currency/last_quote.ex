@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Currency.LastQuote do
+  @moduledoc """
+  Returns a call to "Last Quote for a Currency Pair" Polygon.io
+  """
+
   @type last :: ExPolygon.Last.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

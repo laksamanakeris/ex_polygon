@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Stocks.SnapshotGainersLosers do
+  @moduledoc """
+  Returns a call to Stocks "Snapshot - Gainers / Losers" Polygon.io
+  """
+
   @type snap :: ExPolygon.Snapshot.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

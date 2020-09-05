@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.TickerTypes do
+  @moduledoc """
+  Returns a call to "Ticker Types" Polygon.io
+  """
+
   @type type :: ExPolygon.TickerType.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

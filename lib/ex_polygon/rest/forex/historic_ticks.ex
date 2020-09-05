@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Forex.HistoricTicks do
+  @moduledoc """
+  Returns a call to "Historic Forex Ticks" Polygon.io
+  """
+
   @type historic :: ExPolygon.HistoricForex.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

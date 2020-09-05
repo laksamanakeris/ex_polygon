@@ -1,4 +1,9 @@
 defmodule ExPolygon.Rest.HTTPClient do
+  @moduledoc """
+  Module to process calls to the polygon api, parse it
+  and provide responce to the caller
+  """
+
   @endpoint :ex_polygon |> Application.get_env(:endpoint, "https://api.polygon.io") |> URI.parse()
 
   @type api_key :: String.t()

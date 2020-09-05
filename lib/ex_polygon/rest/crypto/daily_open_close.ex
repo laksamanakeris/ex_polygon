@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.Crypto.DailyOpenClose do
+  @moduledoc """
+  Returns a call to Crypto "Daily Open / Close" Polygon.io
+  """
+
   @type day_stat :: ExPolygon.CryptoOpenClose.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()

@@ -1,4 +1,8 @@
 defmodule ExPolygon.Rest.PreviousClose do
+  @moduledoc """
+  Returns a call to Stocks "Previous Close" Polygon.io
+  """
+
   @type aggregate :: ExPolygon.Aggregate.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()
