@@ -18,7 +18,8 @@ defmodule ExPolygon.Rest.Currency.Conversion do
   end
 
   defp parse_response(%{"status" => "success", "last" => last} = data) do
-    {:ok, last} = Mapail.map_to_struct(last, ExPolygon.Last, transformations: [:snake_case])
+    {:ok, last} =
+      Mapail.map_to_struct(last, ExPolygon.CurrencyQuote, transformations: [:snake_case])
 
     {:ok, conversion} =
       data

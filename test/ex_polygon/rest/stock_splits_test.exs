@@ -13,7 +13,7 @@ defmodule ExPolygon.Rest.StockSplitsTest do
   test ".query returns an ok tuple with a list of splits" do
     use_cassette "rest/stock_splits/query_ok" do
       assert {:ok, splits} = ExPolygon.Rest.StockSplits.query("AAPL", @api_key)
-      assert [%ExPolygon.StockSplit{} = _ | _] = splits
+      assert [%ExPolygon.Split{} = _ | _] = splits
     end
   end
 end

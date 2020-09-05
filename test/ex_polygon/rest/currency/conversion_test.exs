@@ -25,7 +25,7 @@ defmodule ExPolygon.Rest.Currency.ConversionTest do
       assert conversion.to == "USD"
       assert conversion.initial_amount == 100
 
-      assert %ExPolygon.Last{} = last = conversion.last
+      assert %ExPolygon.CurrencyQuote{} = last = conversion.last
       assert is_number(last.ask)
       assert is_number(last.bid)
       assert is_number(last.exchange)

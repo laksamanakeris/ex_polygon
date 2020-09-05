@@ -14,7 +14,7 @@ defmodule ExPolygon.Rest.Currency.LastQuoteTest do
     use_cassette "rest/last_quote_currency/query_ok" do
       assert {:ok, quot} = ExPolygon.Rest.Currency.LastQuote.query("AUD", "USD", @api_key)
 
-      assert %ExPolygon.Last{} = quot
+      assert %ExPolygon.CurrencyQuote{} = quot
       assert is_number(quot.ask)
       assert is_number(quot.bid)
       assert is_number(quot.exchange)

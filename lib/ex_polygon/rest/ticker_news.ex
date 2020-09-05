@@ -1,5 +1,5 @@
 defmodule ExPolygon.Rest.TickerNews do
-  @type news :: ExPolygon.News.t()
+  @type news :: ExPolygon.TickerNews.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()
 
@@ -20,7 +20,7 @@ defmodule ExPolygon.Rest.TickerNews do
   defp parse_response(data) do
     news =
       data
-      |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.News, transformations: [:snake_case]))
+      |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.TickerNews, transformations: [:snake_case]))
       |> Enum.map(fn {:ok, t} -> t end)
 
     {:ok, news}

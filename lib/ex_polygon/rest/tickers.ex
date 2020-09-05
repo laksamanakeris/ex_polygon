@@ -1,7 +1,7 @@
 defmodule ExPolygon.Rest.Tickers do
+  @type tickers :: ExPolygon.Tickers.t()
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()
-  @type tickers :: ExPolygon.Tickers.t()
 
   @path "/v2/reference/tickers"
 

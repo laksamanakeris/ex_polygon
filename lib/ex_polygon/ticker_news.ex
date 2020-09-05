@@ -1,5 +1,5 @@
-defmodule ExPolygon.News do
-  @type t :: %ExPolygon.News{}
+defmodule ExPolygon.TickerNews do
+  @type t :: %ExPolygon.TickerNews{}
 
   defstruct ~w(
     symbols

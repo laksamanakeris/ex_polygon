@@ -19,7 +19,7 @@ defmodule ExPolygon.Rest.TickerNewsTest do
                  @api_key
                )
 
-      assert [%ExPolygon.News{} = _ | _] = news
+      assert [%ExPolygon.TickerNews{} = _ | _] = news
     end
   end
 end
