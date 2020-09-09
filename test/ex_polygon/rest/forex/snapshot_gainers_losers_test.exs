@@ -10,8 +10,6 @@ defmodule ExPolygon.Rest.Forex.SnapshotGainersLosersTest do
 
   @api_key System.get_env("POLYGON_API_KEY")
 
-  # TODO redo the cassettes ones the marker is on
-
   test ".query returns an ok tuple and a list top/bottom 20 tickers" do
     use_cassette "rest/forex/snapshot_gainers_losers/query_ok" do
       assert {:ok, snaps} = ExPolygon.Rest.Forex.SnapshotGainersLosers.query("gainers", @api_key)

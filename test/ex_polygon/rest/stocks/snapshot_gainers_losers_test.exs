@@ -10,8 +10,6 @@ defmodule ExPolygon.Rest.Stocks.SnapshotGainersLosersTest do
 
   @api_key System.get_env("POLYGON_API_KEY")
 
-  # TODO redo the cassettes ones the marker is on
-
   test ".query returns an ok tuple and a list top/bottom 20 tickers" do
     use_cassette "rest/stocks/snapshot_gainers_losers/query_ok" do
       assert {:ok, snaps} = ExPolygon.Rest.Stocks.SnapshotGainersLosers.query("gainers", @api_key)
@@ -23,8 +21,8 @@ defmodule ExPolygon.Rest.Stocks.SnapshotGainersLosersTest do
       assert is_map(snap.last_quote)
       assert is_map(snap.min)
       assert is_map(snap.prev_day)
-      assert is_float(snap.todays_change)
-      assert is_float(snap.todays_change_perc)
+      assert is_number(snap.todays_change)
+      assert is_number(snap.todays_change_perc)
       assert is_integer(snap.updated)
     end
   end
