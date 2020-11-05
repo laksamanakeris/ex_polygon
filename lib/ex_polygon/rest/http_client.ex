@@ -32,8 +32,8 @@ defmodule ExPolygon.Rest.HTTPClient do
   end
 
   defp parse_response({:ok, %HTTPoison.Response{status_code: 400, body: body}}) do
-    message = Jason.decode!(body) |> Map.fetch!("message")
-    {:error, {:bad_request, message}}
+    data = Jason.decode!(body)
+    {:error, data}
   end
 
   defp parse_response({:ok, %HTTPoison.Response{status_code: 401, body: body}}) do
