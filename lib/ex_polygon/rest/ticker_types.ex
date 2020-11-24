@@ -16,10 +16,18 @@ defmodule ExPolygon.Rest.TickerTypes do
     end
   end
 
-  def parse_response(%{"status" => "OK", "results" => results}) do
+  defp parse_response(%{"status" => "OK", "results" => results}) do
     {:ok, type} =
       Mapail.map_to_struct(results, ExPolygon.TickerType, transformations: [:snake_case])
 
     {:ok, type}
+  end
+
+  defp parse_response(%{"status" => "NOT_FOUND"} = _data) do
+    {:error, :not_found}
+  end
+
+  defp parse_response(_) do
+    {:error, :bad_request}
   end
 end

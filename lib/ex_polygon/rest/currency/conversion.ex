@@ -32,4 +32,12 @@ defmodule ExPolygon.Rest.Currency.Conversion do
 
     {:ok, conversion}
   end
+
+  defp parse_response(%{"status" => "NOT_FOUND"} = _data) do
+    {:error, :not_found}
+  end
+
+  defp parse_response(_) do
+    {:error, :bad_request}
+  end
 end

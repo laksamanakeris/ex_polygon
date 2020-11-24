@@ -20,7 +20,7 @@ defmodule ExPolygon.Rest.PreviousClose do
     end
   end
 
-  defp parse_response(%{"results" => results} = data) do
+  defp parse_response(%{"status" => "OK", "results" => results} = data) do
     results =
       results
       |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.DayClose, transformations: [:snake_case]))
@@ -32,5 +32,13 @@ defmodule ExPolygon.Rest.PreviousClose do
       |> Mapail.map_to_struct(ExPolygon.Aggregate, transformations: [:snake_case])
 
     {:ok, aggregate}
+  end
+
+  defp parse_response(%{"status" => "NOT_FOUND"} = _data) do
+    {:error, :not_found}
+  end
+
+  defp parse_response(_) do
+    {:error, :bad_request}
   end
 end

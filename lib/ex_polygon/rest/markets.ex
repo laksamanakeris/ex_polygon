@@ -16,12 +16,20 @@ defmodule ExPolygon.Rest.Markets do
     end
   end
 
-  def parse_response(%{"status" => "OK", "results" => results}) do
+  defp parse_response(%{"status" => "OK", "results" => results}) do
     markets =
       results
       |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.Market, transformations: [:snake_case]))
       |> Enum.map(fn {:ok, t} -> t end)
 
     {:ok, markets}
+  end
+
+  defp parse_response(%{"status" => "NOT_FOUND"} = _data) do
+    {:error, :not_found}
+  end
+
+  defp parse_response(_) do
+    {:error, :bad_request}
   end
 end

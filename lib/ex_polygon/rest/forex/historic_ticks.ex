@@ -22,7 +22,7 @@ defmodule ExPolygon.Rest.Forex.HistoricTicks do
     end
   end
 
-  def parse_response(%{"status" => "success", "ticks" => results} = data) do
+  defp parse_response(%{"status" => "success", "ticks" => results} = data) do
     ticks =
       results
       |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.Forex, transformations: [:snake_case]))
@@ -34,5 +34,13 @@ defmodule ExPolygon.Rest.Forex.HistoricTicks do
       |> Mapail.map_to_struct(ExPolygon.HistoricForex, transformations: [:snake_case])
 
     {:ok, historic}
+  end
+
+  defp parse_response(%{"status" => "NOT_FOUND"} = _data) do
+    {:error, :not_found}
+  end
+
+  defp parse_response(_) do
+    {:error, :bad_request}
   end
 end

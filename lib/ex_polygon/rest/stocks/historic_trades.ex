@@ -26,7 +26,7 @@ defmodule ExPolygon.Rest.Stocks.HistoricTrades do
     end
   end
 
-  def parse_response(%{"results" => results} = data) do
+  defp parse_response(%{"results" => results, "success" => true} = data) do
     results =
       results
       |> Enum.map(
@@ -40,5 +40,13 @@ defmodule ExPolygon.Rest.Stocks.HistoricTrades do
       |> Mapail.map_to_struct(ExPolygon.History, transformations: [:snake_case])
 
     {:ok, trades}
+  end
+
+  defp parse_response(%{"success" => false} = _data) do
+    {:error, :not_found}
+  end
+
+  defp parse_response(_) do
+    {:error, :bad_request}
   end
 end
