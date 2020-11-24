@@ -26,7 +26,7 @@ defmodule ExPolygon.Rest.Stocks.LastTradeOfTicker do
     {:ok, trade}
   end
 
-  defp parse_response(%{"status" => "NOT_FOUND"} = _data) do
+  defp parse_response(%{"status" => "notfound"} = _data) do
     {:error, :not_found}
   end
 
