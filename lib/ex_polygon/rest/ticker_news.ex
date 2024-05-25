@@ -7,15 +7,14 @@ defmodule ExPolygon.Rest.TickerNews do
   @type api_key :: ExPolygon.Rest.HTTPClient.api_key()
   @type shared_error_reasons :: ExPolygon.Rest.HTTPClient.shared_error_reasons()
 
-  @path "/v1/meta/symbols/:symbol/news"
+  @path "/v2/reference/news"
 
   # params is a string format map, that contains possible parameters
   # for the call, like %{"perpage" => 3, "page" => 1} etc
-  @spec query(String.t(), map, api_key) :: {:ok, [news]} | {:error, shared_error_reasons}
-  def query(symbol, params \\ %{}, api_key) do
+  @spec query(map, api_key) :: {:ok, [news]} | {:error, shared_error_reasons}
+  def query(params \\ %{}, api_key) do
     with {:ok, data} <-
            @path
-           |> String.replace(":symbol", symbol)
            |> ExPolygon.Rest.HTTPClient.get(params, api_key) do
       parse_response(data)
     end

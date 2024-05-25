@@ -14,8 +14,7 @@ defmodule ExPolygon.Rest.TickerNewsTest do
     use_cassette "rest/ticker_news/query_ok" do
       assert {:ok, news} =
                ExPolygon.Rest.TickerNews.query(
-                 "AAPL",
-                 %{"perpage" => 50, "page" => 1},
+                 %{"ticker" => "AAPL", "perpage" => 50, "page" => 1},
                  @api_key
                )
 
