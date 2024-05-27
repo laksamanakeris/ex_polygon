@@ -25,7 +25,7 @@ defmodule ExPolygon.MixProject do
       {:httpoison, "~> 1.0"},
       {:mapail, "~> 1.0.2"},
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:exvcr, "~> 0.10.2", only: [:dev, :test]},
+      {:exvcr, "~> 0.11", only: [:dev, :test]},
       {:mock, "~> 0.3.3", only: :test},
       {:mix_test_watch, "~> 0.9", only: :dev, runtime: false},
       {:ex_unit_notifier, "~> 0.1", only: :test},

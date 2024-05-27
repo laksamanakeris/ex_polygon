@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :exvcr,
   filter_request_headers: [],

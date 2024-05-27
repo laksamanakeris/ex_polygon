@@ -20,11 +20,18 @@ defmodule ExPolygon.Rest.TickerNews do
     end
   end
 
-  defp parse_response(data) do
-    news =
+  defp parse_response(%{"status" => "OK", "results" => results} = data) do
+    results =
+      results
+      |> Enum.map(
+        &Mapail.map_to_struct(&1, ExPolygon.TickerNewsResult, transformations: [:snake_case])
+      )
+      |> Enum.map(fn {:ok, result} -> result end)
+
+    {:ok, news} =
       data
-      |> Enum.map(&Mapail.map_to_struct(&1, ExPolygon.TickerNews, transformations: [:snake_case]))
-      |> Enum.map(fn {:ok, t} -> t end)
+      |> Map.put("results", results)
+      |> Mapail.map_to_struct(ExPolygon.TickerNews, transformations: [:snake_case])
 
     {:ok, news}
   end
