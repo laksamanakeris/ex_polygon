@@ -18,7 +18,11 @@ defmodule ExPolygon.Rest.TickerNewsTest do
                  @api_key
                )
 
-      assert [%ExPolygon.TickerNews{} = _ | _] = news
+      assert %ExPolygon.TickerNews{} = news
+      assert news.request_id != nil
+      assert [%ExPolygon.TickerNewsResult{} = result | _] = news.results
+      assert result.article_url != nil
+
     end
   end
 end
