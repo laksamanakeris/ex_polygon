@@ -14,12 +14,13 @@ defmodule ExPolygon.Rest.TickersTest do
     use_cassette "rest/tickers/query_ok" do
       assert {:ok, tickers} =
                ExPolygon.Rest.Tickers.query(
-                  %{"limit" => 50, "date" => "2024-06-15"},
+                  %{"ticker" => "AAPL", "limit" => 50, "date" => "2024-06-15"},
                  @api_key
                )
 
       assert tickers.count != nil
       assert [%ExPolygon.Ticker{} = _ | _] = tickers.results
+      IO.inspect(tickers.results)
     end
   end
 end

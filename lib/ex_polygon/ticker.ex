@@ -1,17 +1,16 @@
 defmodule ExPolygon.Ticker do
   defstruct ~w(
-    active
-    codes
-    currency
-    locale
-    market
-    name
-    primary_exch
     ticker
+    name
+    market
+    locale
+    primary_exchange
     type
-    attrs
-    updated
-    isOTC
-    url
+    active
+    currency_name
+    cik
+    composite_figi
+    share_class_figi
+    last_updated_utc
   )a
 end
