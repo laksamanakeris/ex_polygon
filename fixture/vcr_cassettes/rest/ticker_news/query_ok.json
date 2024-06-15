@@ -3,7 +3,7 @@
     "request": {
       "options": [],
       "body": "",
-      "url": "https://api.polygon.io/v2/reference/news?apiKey=***eBW3jIHcpDil5K5rFB4a8irMFX9Sm5&page=1&perpage=50&ticker=AAPL",
+      "url": "https://api.polygon.io/v2/reference/news?apiKey=**********************&page=1&perpage=50&ticker=AAPL",
       "headers": [],
       "method": "get",
       "request_body": ""

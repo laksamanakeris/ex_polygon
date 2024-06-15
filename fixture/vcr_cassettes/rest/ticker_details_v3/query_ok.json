@@ -3,7 +3,7 @@
     "request": {
       "options": [],
       "body": "",
-      "url": "https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=***eBW3jIHcpDil5K5rFB4a8irMFX9Sm5",
+      "url": "https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=**********************",
       "headers": [],
       "method": "get",
       "request_body": ""
